@@ -1,0 +1,194 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.utmiit_coin{
+	width: 1080px;
+	height: 2340px;
+	background-image: url(imgs/background.png);
+	display: flex;
+  	justify-content: center;
+  	position:relative;
+	padding-bottom:50px;
+}
+
+.progress_full{
+	width: 95%;
+	height: 45px;
+	background: #333333;
+	border-radius: 45px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.progress_click{
+	width: 0%;
+	height: 45px;
+	background: linear-gradient(to right, #9aa0a8, #ffffff , #9aa0a8);
+	border-radius: 45px;
+	transition: width 0.3s ease;
+}
+
+.user_profile{
+	width: 100%;
+	height: 520px;
+	background: red;
+}
+
+.OneStats{
+	width: 100%;
+	height: 50%;
+	background: black;
+	color: white;
+	font-size: 44px;
+	display: flex;
+    align-items: center;
+    font-family: "Mulish"; 
+}
+
+.OneStats div{
+	margin-right: 50px;
+}
+
+.topBoard{
+	font-family: "Mulish"; 
+	width: 50%;
+	height: 100px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: 320px;
+    font-size: 44px;
+}
+
+.topBoard h3{
+	margin-top: -64px;
+	font-size: 40px;
+}
+
+.TwoStats{
+	width: 100%;
+	height: 50%;
+	background: black;
+	color: white;
+}
+
+.image_avatar{
+	width: 200px;
+	height: 200px;
+	background-image: url(imgs/avatar.png);
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.MoneyInfo {
+    display: flex;
+    align-items: center;
+}
+
+.MoneyCount {
+    margin-right: 5px;
+}
+
+.coin{
+	position: absolute;
+	perspective: ;
+	width: 640px;
+	height: 640px;
+	background-image: url(imgs/coin.png);
+	background-color: transparent;
+	text-decoration: none;
+	outline: 0;
+    outline-offset: 0;
+    border: 0 !important;
+    top: 800px;
+    transition: transform 0.5s;
+}
+.coin:active, :hover, :focus{
+	outline: 0;
+    outline-offset: 0;
+    border: 0 !important;
+}
+
+.BoostBar{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.coin.tilt :active, :hover, :focus{
+	outline: none;
+    border: none;
+}
+.coin.tilt {
+    animation: tiltAnimation 1s ease forwards;
+    outline: none;
+    border: none;
+}
+
+.flash {
+    position: absolute;
+    font-size: 44px;
+    color: white;
+    animation: flashAnimation 0.5s ease forwards;
+    pointer-events: none;
+    font-family: "Mulish"; 
+}
+
+.top_image{
+	width: 176px;
+	height: 69px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(imgs/top_wings.png); 
+}
+
+@keyframes flashAnimation {
+    0% {
+        opacity: 1; 
+    }
+    50% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+    }
+}
+
+@keyframes tiltAnimation {
+    0% {
+        transform: rotateX(0deg);
+        outline: none;
+    	border: none;
+    }
+    100% {
+        transform: rotateX(-90deg);
+        outline: none;
+    	border: none;
+    }
+}
+
+@keyframes untiltAnimation {
+    0% {
+        transform: rotateX(-90deg);
+        outline: none;
+    	border: none;
+    }
+    100% {
+        transform: rotateX(0deg); 
+       	outline: none;
+    	border: none;
+    }
+}
+
+@font-face {
+  font-family: "Mulish"; 
+  // адрес шрифта и тип 
+  src: url("font/Mulish-Bold.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: normal; 
+} 
