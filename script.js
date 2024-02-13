@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Увеличиваем счетчик монет
         let currentCount = parseInt(moneyCountElement.textContent);
-        currentCount += 1;
+        currentCount += 10;
         moneyCountElement.textContent = currentCount;
 
         // Увеличиваем прогресс-бар на 5%
